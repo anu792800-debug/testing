@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Analytics Test Website</title>
-  <!-- Google Analytics tracking code: Replace G-XXXXXXXXXX with your Measurement ID -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dress Shop</title>
+
+  <!-- Google Analytics tracking code -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -11,9 +13,41 @@
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX');
   </script>
+
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    header { background-color: #f8b400; padding: 10px; text-align: center; color: white; }
+    .product { border: 1px solid #ddd; padding: 15px; margin: 15px; display: inline-block; width: 180px; vertical-align: top; }
+    img { width: 100%; }
+    h3 { margin-top: 0; }
+    button { background-color: #4CAF50; color: white; border: none; padding: 8px 12px; cursor: pointer; }
+    button:hover { background-color: #45a049; }
+  </style>
 </head>
 <body>
-  <h1>Google Analytics Tracking Test</h1>
-  <p>This site is deployed on Vercel and Google Analytics is active.</p>
+  <header>
+    <h1>Welcome to Dress Shop</h1>
+  </header>
+  
+  <div class="product">
+    <img src="https://example.com/dress1.jpg" alt="Red Dress" />
+    <h3>Red Dress</h3>
+    <p>$49.99</p>
+    <button>Add to Cart</button>
+  </div>
+  
+  <div class="product">
+    <img src="https://example.com/dress2.jpg" alt="Blue Dress" />
+    <h3>Blue Dress</h3>
+    <p>$59.99</p>
+    <button>Add to Cart</button>
+  </div>
+  
+  <div class="product">
+    <img src="https://example.com/dress3.jpg" alt="Green Dress" />
+    <h3>Green Dress</h3>
+    <p>$39.99</p>
+    <button>Add to Cart</button>
+  </div>
 </body>
 </html>
