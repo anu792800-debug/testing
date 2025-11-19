@@ -1,0 +1,18 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('trackButton');
+
+    button.addEventListener('click', () => {
+        alert('Custom Event Sent! Check your GA4 Realtime Report.');
+        
+        // This function sends a custom event to Google Analytics 4
+        if (typeof gtag === 'function') {
+            gtag('event', 'button_click', {
+                'event_category': 'interaction',
+                'event_label': 'track_demo_button',
+                'value': 1
+            });
+        } else {
+            console.error('gtag function not found. Did the Google Analytics script load correctly?');
+        }
+    });
+});
